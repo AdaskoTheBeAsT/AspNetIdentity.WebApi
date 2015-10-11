@@ -1,12 +1,9 @@
 ﻿using Microsoft.AspNet.Identity;
 using SendGrid;
-using System;
-using System.Collections.Generic;
+
 using System.Configuration;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using System.Web;
 
 namespace AspNetIdentity.WebApi.Services
 {

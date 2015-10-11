@@ -8,11 +8,9 @@ using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 using Owin;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Net.Http.Formatting;
-using System.Web;
 using System.Web.Http;
 
 namespace AspNetIdentity.WebApi
@@ -46,8 +44,8 @@ namespace AspNetIdentity.WebApi
             {
                 //For Dev enviroment only (on production should be AllowInsecureHttp = false)
                 AllowInsecureHttp = true,
-                TokenEndpointPath = new PathString("/oauth/token"),
-                AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
+                TokenEndpointPath = new PathString("/token"),
+                AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(1),
                 Provider = new CustomOAuthProvider(),
                 AccessTokenFormat = new CustomJwtFormat("http://localhost:59822")
             };
